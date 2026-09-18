@@ -4,6 +4,130 @@ body {
     padding: 0;
 }
 
+.navbar,
+.navbar * {
+  box-sizing: border-box;
+}
+
+.nav-bar {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: 100vw;
+
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 23px 40px;
+    border-bottom: 2px solid #f3f4f6;
+}
+
+.nav-grp {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-bar a {
+    flex-shrink: 0;
+    text-decoration: none;
+    color: black;
+}
+
+.left-nav a.logo {
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+.logo-img {
+    height: 30px;
+    width: auto;
+    display: block;
+}
+
+.left-nav {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.right-nav a.trial {
+    font-size: 17px;
+    font-weight: 600;
+    color: blue;
+}
+
+.right-nav a.trial:hover {
+    color: black;
+}
+
+.right-nav a.login {
+    font-size: 13px;
+    color: black;
+}
+
+.sub-navbar,
+.sub-navbar * {
+    box-sizing: border-box;
+}
+
+.sub-navbar {
+    position: sticky;
+    top: 0; /* the thing that keeps it all the way at the top*/
+    z-index: 99;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 25px 60px;
+
+    background-color: white;
+    backdrop-filter: blur(0px);
+
+    animation: makeOpaque linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0px 150px;
+    /*max-width: 100vw;*/
+
+    /*flex-wrap: wrap;*/
+    /*box-sizing: border-box;*/
+}
+
+.sub-var-links {
+    display: flex;
+    gap: 30px;
+}
+
+.sub-var-links a {
+    flex-shrink: 0;
+    text-decoration: none;
+    color: black;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.sub-var-links a:hover {
+    color: #ff764d;
+}
+
+@keyframes makeOpaque {
+  to {
+    background-color: rgba(255, 255, 255, 1); /* Becomes solid white */
+    backdrop-filter: blur(8px); /* Optional elegant glassy effect while scrolling */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Adds a subtle shadow when stuck */
+  }
+}
+
+.main-info {
+    position: relative;
+    width: 100%;
+}
+
 .intro {
     background-image: url("https://images.pexels.com/photos/6105531/pexels-photo-6105531.jpeg");
     background-size: cover;
